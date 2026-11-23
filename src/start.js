@@ -3,7 +3,8 @@
 const GOLD = 0xF1C40F;
 global.GOLD = GOLD;
 
-require('./whitelist').install();
+// Register the command/event module; ./whitelist.js only exports whitelist helpers.
+require('./whitelist-command').install();
 require('./social-interactions').install();
 require('./prefix-commands').install();
 require('./slash-security').install();
