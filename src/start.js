@@ -13,5 +13,7 @@ require('./interaction-fixes').install();
 require('./social-events').install();
 require('./package5').install();
 require('./package6').install();
+// Installed last so this handler owns /cookie-game and its button interactions.
+require('./cookie-game-fix').install();
 process.env.ENABLE_PRIVILEGED_INTENTS = 'true';
 require('./index');

@@ -1,9 +1,3 @@
-function renderWelcomeText(template, member) {
-  const configured = String(template || '').trim();
-  const userTag = `<@${member.id}>`;
-  const rendered = configured
-    .replaceAll('[user]', userTag)
-    .replaceAll('{user}', userTag)
-    .replaceAll('{server}', member.guild.name);
-  return rendered.includes(userTag) ? rendered : `${userTag}\n${rendered}`;
-}
+# Nota de compatibilidad
+
+El archivo temporal creado durante la preparación de una corrección ya no contiene código ejecutable. Usa `npm start` para iniciar el bot.
