@@ -1,0 +1,9 @@
+function renderWelcomeText(template, member) {
+  const configured = String(template || '').trim();
+  const userTag = `<@${member.id}>`;
+  const rendered = configured
+    .replaceAll('[user]', userTag)
+    .replaceAll('{user}', userTag)
+    .replaceAll('{server}', member.guild.name);
+  return rendered.includes(userTag) ? rendered : `${userTag}\n${rendered}`;
+}
