@@ -1,10 +1,9 @@
 'use strict';
 
-// Define la constante requerida por el juego de la galleta.
 const GOLD = 0xF1C40F;
 global.GOLD = GOLD;
 
-// Install modules before the main entry point registers Discord event listeners.
+require('./whitelist').install();
 require('./social-interactions').install();
 require('./prefix-commands').install();
 require('./slash-security').install();
